@@ -1,4 +1,5 @@
 require 'rack'
+require 'thin'
 
 class InvalidArguments < StandardError; end
 
@@ -15,9 +16,12 @@ class Mitt::CLI
 
     port, body = read_args
 
-    app = Proc.new do |env|
-      ['200', {'Content-Type' => 'text/html'}, [body]]
-    end
+    app = Mitt::App.new(body)
+
+    # Suppress thin's normal startup message
+    Thin::Logging.silent = true
+
+    puts "Mitt is listening on port #{port}"
 
     Rack::Handler::Thin.run app, Port: port
   rescue InvalidArguments
