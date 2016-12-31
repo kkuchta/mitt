@@ -1,4 +1,3 @@
-require 'pry-byebug'
 class Mitt::App
   def initialize(body)
     @body = body
