@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.email         = ["kevin@kevinkuchta.com"]
 
   spec.summary       = %q{Receive http requests and print them to standard out}
-  #spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "https://github.com/kkuchta/mitt"
   spec.license       = "MIT"
 
@@ -21,8 +20,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "rack", "~> 1.0"
-  spec.add_development_dependency "thin", "~> 1.0"
+  spec.add_dependency "rack", "~> 1.0"
+  spec.add_dependency "thin", "~> 1.0"
 
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
