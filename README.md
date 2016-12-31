@@ -2,30 +2,9 @@
 
 Mitt catches http requests and prints them to standard out.  Useful for testing webhooks.
 
-```
-$ mitt 9001
-Mitt is listening on port 9001
---- GET / ---
---- POST / ---
-some http body
---- POST / ---
-another body here
---- GET /some/path/here ---
-```
+![mitt example gif](https://raw.githubusercontent.com/kkuchta/mitt/master/mitt.gif)
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'mitt'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install mitt
 
